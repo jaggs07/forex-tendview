@@ -36,17 +36,7 @@ var chart = createChart(document.body, {
     },
   },
   priceScale: {
-    position: 'left',
-    mode: 2,
-    autoScale: false,
-    invertScale: true,
-    alignLabels: false,
-    borderVisible: false,
-    borderColor: '#555ffd',
-    scaleMargins: {
-      top: 0.30,
-      bottom: 0.25,
-    },
+    position: 'left'
   },
   grid: {
     vertLines: {
