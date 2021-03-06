@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { createChart } from 'lightweight-charts'
 import { io } from 'socket.io-client'
-import { getCryptoData } from './api'
+import { getPreviousCryptoData } from './api'
 import moment from 'moment'
 import './App.css'
 
@@ -62,9 +62,9 @@ chart.timeScale().fitContent();
 
 const lineSeries = chart.addAreaSeries()
 
-export default function App ({ }) {
+export default function App () {
   useEffect(async () => {
-    const pastData = await getCryptoData()
+    const pastData = await getPreviousCryptoData()
     const formattedData = pastData.map(d => {
       const currentDate = new Date()
       const mil = currentDate.getTimezoneOffset()
