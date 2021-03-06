@@ -1,0 +1,1 @@
+export const BASE_URL = process.env === 'prod' ? 'production_url' : 'http://localhost:4000'
